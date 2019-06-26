@@ -22,7 +22,7 @@ func fib(n int){
 
 
 func main(){
-	fib(10)
+	fib(7)
 }
 
 
