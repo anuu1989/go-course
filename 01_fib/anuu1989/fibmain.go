@@ -1,7 +1,11 @@
 package main 
 
-import "fmt"
-
+import (
+	"fmt"
+	"io"
+	"os"
+)
+var out io.Writer = os.Stdout
 func fib(n int){
 
 	var maxnumber int = n
@@ -9,11 +13,10 @@ func fib(n int){
 	var nextNumber int = 1
 
 	for i :=1 ; i <= maxnumber ; i++{
-		fmt.Println(previousNumber)
+		fmt.Fprintln(out, previousNumber)
 		sum := previousNumber + nextNumber
 		previousNumber = nextNumber
 		nextNumber = sum 
-
 	}
 
 
